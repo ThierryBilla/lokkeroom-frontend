@@ -14,7 +14,7 @@ function Register() {
         
         try {
             // Send request to register to the back-end
-            const response = await axios.post('http://localhost:3000/api/register', {
+            const response = await axios.post('https://lokkeroom-backend-d2af6791c4b9.herokuapp.com/api/register', {
                 nickname: username,
                 email: email,
                 password: password

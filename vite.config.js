@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Proxying API requests to avoid CORS issues and serve them correctly
       '/api': {
-        target: 'http://localhost:3000',  // Remplacez par l'URL de votre serveur backend si elle est différente
+        target: 'https://lokkeroom-backend-d2af6791c4b9.herokuapp.com/',  // Remplacez par l'URL de votre serveur backend si elle est différente
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '')

@@ -10,7 +10,7 @@ import Register from './components/Register';
 import { useAuth } from './context/AuthContext';
 import './index.css';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = ' https://lokkeroom-backend-d2af6791c4b9.herokuapp.com/';
 
 function App() {
   const { user, isAdmin } = useAuth();
