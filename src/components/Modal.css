@@ -1,0 +1,86 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;  /* Aligné en haut à droite sans trop empiéter sur le contenu */
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #fb5e3b;  /* Couleur accrocheuse mais pas trop agressive */
+    font-size: 16px;  /* Réduction de la taille de la police pour plus de discrétion */
+    cursor: pointer;
+    padding: 5px;  /* Réduction du padding pour diminuer l'encombrement visuel */
+    opacity: 0.7;  /* Légère transparence pour réduire l'impact visuel */
+}
+
+.close-button:hover {
+    opacity: 1;  /* Pleine opacité au survol pour indiquer l'interactivité */
+    color: #ffffff;  /* Changement de couleur pour une meilleure visibilité au survol */
+}
+
+
+.modal-content {
+    position: relative;
+    background: #222224;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    background: #2c2c2e;
+    color: white;
+    font-size: 16px;
+}
+
+.modal-content textarea {
+    min-height: 100px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #3333ac;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.modal-content button:hover {
+    background-color: #fb5e3b;
+}

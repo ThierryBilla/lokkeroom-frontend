@@ -1,0 +1,250 @@
+/* Reset  */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #ffffff;
+}
+
+/* app global style */
+.app {
+  display: flex;
+  height: 100vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar pour la liste des chats */
+.chat-list {
+  width: 30%;
+  background-color: #2c2c2e;
+  overflow-y: auto;
+}
+
+.chat-list-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fb5e3b;
+  color: #ffffff;
+  border-bottom: 1px solid #3d3d3f;
+}
+
+.menu-button {
+  cursor: pointer;
+  margin-right: 10px; /* Espace entre le bouton et le titre */
+  background-color: transparent; /* Fond transparent pour ne pas affecter la taille du header */
+  border: none; 
+  padding: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 40px; 
+  height: 40px; 
+}
+
+.menu-button i, .menu-button svg {
+  color: #ffffff; /* Couleur initiale de l'icône */
+  transition: color 0.3s ease; 
+}
+
+.menu-button:hover i, .menu-button:hover svg {
+  color: #000000; /* Couleur de l'icône au survol */
+}
+
+/* Option to start conv / lobbies creation... */
+
+.menu-options {
+  position: absolute;
+  top: 40px; /* Positioned just below the header */
+  left: 20px; /* Aligned with the header start */
+  background-color: #282828;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 100;
+  padding: 5px 0;
+}
+
+.menu-options div {
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease; 
+}
+
+.menu-options div:hover {
+  background-color: #fb5e3b; 
+  color: #ffffff; 
+}
+
+.chat-list-item {
+  padding: 20px;
+  border-bottom: 1px solid #3d3d3f;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-list-item.selected,
+.chat-list-item:hover {
+  background-color: #424245;
+  color: #fb5e3b;
+}
+
+.chat-preview {
+  color: #c7c7c7;
+  font-size: 0.8rem;
+}
+
+/* Fenêtre de chat contenant la partie messages */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+}
+
+.chat-header {
+  padding: 20px;
+  background-color: #17171d;
+  border-bottom: 1px solid #3d3d3f;
+  color: #fb5e3b;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.message-container {
+  display: flex;
+  justify-content: flex-start; /* Ensure messages are aligned to the start */
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+}
+
+.message.received {
+  background-color: #fb5e3b;
+  margin-right: 10px; /* Space for kebab menu */
+}
+
+.message.sent {
+  background-color: #080869;
+  margin-right: 10px; /* Space for kebab menu */
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;  /* Assure l'alignement de l'input et du button */
+  padding-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 5px;
+  background-color: #2c2c2e;
+  border-top: 1px solid #3d3d3f;
+}
+
+.chat-footer input {
+  flex-grow: 1;
+  height: 40px;  /* Hauteur pour matcher avec le bouton send */
+  margin-right: 10px;  
+  border: none;
+  border-radius: 5px;
+  background: #424245;
+  color: white;
+  outline: none;
+  padding: 0 15px;  
+}
+
+
+/* Send button */
+
+.chat-footer button {
+  height: 40px;  /* Height exactly the same than input text*/
+  width: 100px;  
+  background-color: #3333ac ;  
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  /* Center icone on button */
+  justify-content: center; 
+  padding: 0 15px;  
+  margin: 0; 
+  transition: background-color 0.5s ease;  
+}
+
+.chat-footer button:hover {
+  background-color: #fb5e3b;  
+}
+
+
+
+.chat-footer input:focus {
+  background-color: #535357;
+}
+
+/* Style menu kebab option sur les messages */
+
+.message-options-menu {
+  cursor: pointer; 
+  user-select: none;
+  position: absolute;
+  top: 15px; 
+  background-color: #282828; 
+  border: none;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+  z-index: 100;
+  padding: 5px 0;
+  overflow: hidden; 
+}
+
+.message-options-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px; 
+  border: none;
+  background: none;
+  text-align: left;
+  color: #fff; 
+  font-size: 0.9em; 
+  transition: background-color 0.2s ease; 
+  margin: 0; 
+}
+
+.message-options-menu button:hover {
+  background-color: #fb5e3b; 
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .chat-footer button {
+    width: 50px; /* reduce button width on mobile */
+    padding: 0 8px; /* reduce padding to save space */
+  }
+
+  .chat-footer input {
+    margin-right: 5px; /* reduce spacing for mobile */
+    padding: 0 10px; 
+  }
+}
