@@ -55,7 +55,6 @@ To set up this project locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone git@github.com:ThierryBilla/lokkeroom-frontend.git
-   cd lokkeroom-frontend
 
 2. Install dependencies:
    ```bash
