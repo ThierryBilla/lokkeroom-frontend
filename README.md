@@ -56,3 +56,16 @@ To set up this project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/lokkeroom-frontend.git
    cd lokkeroom-frontend
+
+2. Install dependencies:
+   ```bash
+   npm install
+
+3.Start the application:
+   ```bash
+   npm install
+
+
+## Contribution
+
+Contributions are welcome! To propose improvements or report issues, please open an issue or submit a pull request.
