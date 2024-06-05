@@ -69,3 +69,4 @@ To set up this project locally, follow these steps:
 ## Contribution
 
 Contributions are welcome! To propose improvements or report issues, please open an issue or submit a pull request.
+
